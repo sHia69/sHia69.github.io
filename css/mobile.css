@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px; /* Ensures content doesn't overlap with fixed navbar */
+  }
+
+  nav {
+    padding: 0.5em 1em; /* Adjusts padding for the navbar */
+    background-color: #f8f8f8; /* Adds a background color for better visibility */
+    position: fixed; /* Fixes the navbar at the top */
+    width: 100%; /* Ensures the navbar spans the full width */
+    top: 0; /* Positions at the top of the viewport */
+    z-index: 1000; /* Ensures the navbar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of nav items */
+  }
+
+  nav ul {
+    display: inline-block; /* Makes the list inline for horizontal scrolling */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    list-style: none; /* Removes bullet points */
+  }
+
+  nav li {
+    display: inline-block; /* Displays list items inline */
+    margin: 0 10px; /* Adds spacing between navigation items */
+  }
+
+  nav li a {
+    font-size: 14px; /* Slightly larger font size for better readability */
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color */
+    padding: 8px 12px; /* Adds padding for better touch targets */
+    display: inline-block; /* Ensures links are treated as blocks */
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* Profile image styling for mobile */
+  .profile-image {
+    max-width: 100%; /* Image will scale to fit the width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px; /* Adds some space below the image */
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
