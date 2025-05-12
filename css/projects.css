@@ -6,7 +6,9 @@
   flex: 1;
 }
 
-.projects h1 {
+.projects::before {
+  content: "";
+  display: block;
   text-align: center;
   font-size: 2.5rem;
   color: #66cc68;
@@ -15,7 +17,7 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* property specifies the number (and the widths) of columns in a grid layout. */
   gap: 1.5rem;
 }
 
@@ -31,9 +33,11 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.project-card h2 {
+.project-card::before {
+  content: "";
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .project-card p {

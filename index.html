@@ -11,11 +11,24 @@
 </head>
 <a id="top"></a>
 <style>
-  @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 20px;
-    }
+  div img {
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 40%;
   }
+    @media screen and (max-width: 768px) {
+      section > div {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      div img {
+        width: 100%;
+        margin: 0 auto 1rem;
+      }
+      section > div > div {
+        width: 100%;
+      }
+    }
 </style>
 <body>
   <main style="min-height: 100vh; display: flex; flex-direction: column;">
@@ -30,7 +43,7 @@
     </nav>
   <section>
     <div style="display: flex; align-items: center; padding: 2rem;">
-      <img src="./images/bongocode.gif" alt="my image" style="width: 30%; height: auto; margin-right: 2rem; border-radius: 20px;">
+      <img src="./images/bongocode.gif" alt="my image" style=" margin-right: 2rem; border-radius: 20px;">
       <div style="width: 70%;">
         <h1>Hi, I'm Hia Al Saleh.</h1>
         <p style="text-align: center;">

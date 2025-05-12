@@ -6,13 +6,6 @@ section {
   box-shadow: 0 4px 10px rgba(19, 61, 39, 0.3);
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #66cc68;
-}
-
 form {
   display: flex;
   flex-direction: column;
