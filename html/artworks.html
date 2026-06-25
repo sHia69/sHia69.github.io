@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="../css/mobile.css">
   <link rel="stylesheet" href="../css/myStyles.css">
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/artwork.css">
+  <link rel="stylesheet" href="../css/artworks-updated.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<a id="top"></a>
 <body>
+  <a id="top"></a>
   <main style="min-height: 100vh; display: flex; flex-direction: column;">
     <nav>
       <ul>
@@ -22,52 +22,239 @@
         <li><a href="../html/contact.html">Contact</a></li>
       </ul>
     </nav>
-    <h1>My Artworks</h1>
-    <p style="text-align: center;">These artworks are created by hand</p>
-    <div id="art">
-        <div class="slider">
-            <div class="slide"><img src="../images/hero.png" alt="Hero from Darling in the Franxx"><p>Hero - Darling in the Franxx</p></div>
-            <div class="slide"><img src="../images/L.jpg" alt="L from Death Note"><p>L - Death Note</p></div>
-            <div class="slide"><img src="../images/kokichi.jpg" alt="Kokichi Ouma from Danganronpa V3"><p>Kokichi Ouma - Danganronpa V3</p></div>
-            <div class="slide"><img src="../images/beethoven.png" alt="Ludwig van Beethoven"><p>Ludwig van Beethoven</p></div>
-            <div class="slide"><img src="../images/class_animal.jpg" alt="Dave Bayley from Glass Animals"><p>Dave Bayley - Glass Animals</p></div>
-            <div class="slide"><img src="../images/harry.png" alt="Harry Styles"><p>Harry Styles - English singer</p></div>
-            <div class="slide"><img src="../images/wednesday.jpg" alt="Wednesday Addams from The Addams Family"><p>Wednesday Addams - The Addams Family</p></div>
-            <div class="slide"><img src="../images/ui.jpg" alt="UI Singer"><p>IU - South Korean singer</p></div>
+
+    <div class="artworks-page">
+      <!-- Header -->
+      <div class="artworks-header">
+        <h1>My Artworks</h1>
+        <p class="artworks-subtitle">Explore my collection of digital art pieces inspired by anime, musicians, and historical figures.</p>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="artwork-filter-section">
+        <button class="artwork-filter-btn active" onclick="filterArtworks('all')">All Artworks</button>
+        <button class="artwork-filter-btn" onclick="filterArtworks('anime')">Anime</button>
+        <button class="artwork-filter-btn" onclick="filterArtworks('musician')">Musicians</button>
+        <button class="artwork-filter-btn" onclick="filterArtworks('character')">Characters</button>
+      </div>
+
+      <!-- Art Gallery Grid -->
+      <div class="artwork-gallery">
+        <!-- Art 1 -->
+        <div class="art-card" data-category="anime">
+          <div class="art-card-image-wrapper">
+            <img src="../images/hero.png" alt="Hero from Darling in the Franxx">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Hero</h3>
+            <p>A beautiful digital illustration of Hero from the anime series "Darling in the Franxx". Capturing her elegant pose and serene expression with detailed shading.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Anime Character</span>
+            </div>
+          </div>
         </div>
-    </div>
-    <br>
 
-  </main>
-  <footer style="margin-top: auto; background: linear-gradient(#000000, #263723, #040e2c); color: white; text-align: center; padding: 2rem;">
-    <div class="footer-content">
-      <h3>Software Developer</h3>
-      <p class="footer-about">
-        Hi, I'm Hia Al Saleh,
-        a painter artist & software developer
-        who loves exploring new things and being creative.
-        Follow my socials below!
-      </p>
-      <ul class="socials">
-        <li><a href="https://github.com/sHia69"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/hia-al-saleh-5b228726a/"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="https://replit.com/@sHia69"><i class="fa fa-code"></i></a></li>
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 <a href="https://github.com/sHia69">Hia</a></p>
+        <!-- Art 2 -->
+        <div class="art-card" data-category="anime">
+          <div class="art-card-image-wrapper">
+            <img src="../images/L.jpg" alt="L from Death Note">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>L Lawliet</h3>
+            <p>A striking portrait of L from "Death Note". Perfectly capturing his mysterious personality and iconic slouching posture with meticulous detail.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Anime Character</span>
+            </div>
+          </div>
+        </div>
 
-      <div class="footer-menu">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../html/about.html">About</a></li>
-          <li><a href="../html/contact.html">Contact</a></li>
+        <!-- Art 3 -->
+        <div class="art-card" data-category="anime">
+          <div class="art-card-image-wrapper">
+            <img src="../images/kokichi.jpg" alt="Kokichi Ouma from Danganronpa V3">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Kokichi Ouma</h3>
+            <p>A mischievous representation of Kokichi Ouma from "Danganronpa V3". Capturing his playful yet mysterious nature with expressive artwork.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Anime Character</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 4 -->
+        <div class="art-card" data-category="character">
+          <div class="art-card-image-wrapper">
+            <img src="../images/beethoven.png" alt="Ludwig van Beethoven">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Ludwig van Beethoven</h3>
+            <p>A classical portrait of the legendary composer Ludwig van Beethoven. Rendered with historical accuracy and artistic flair, capturing his intense gaze.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Historical Figure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 5 -->
+        <div class="art-card" data-category="musician">
+          <div class="art-card-image-wrapper">
+            <img src="../images/class_animal.jpg" alt="Dave Bayley from Glass Animals">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Dave Bayley</h3>
+            <p>A stylized portrait of Dave Bayley, the talented frontman of Glass Animals. Capturing his creative energy with vibrant artistic expression.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Musician</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 6 -->
+        <div class="art-card" data-category="musician">
+          <div class="art-card-image-wrapper">
+            <img src="../images/harry.png" alt="Harry Styles">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Harry Styles</h3>
+            <p>A contemporary portrait of Harry Styles, the English singer-songwriter. Rendered with modern styling and artistic interpretation.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Musician</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 7 -->
+        <div class="art-card" data-category="character">
+          <div class="art-card-image-wrapper">
+            <img src="../images/wednesday.jpg" alt="Wednesday Addams from The Addams Family">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>Wednesday Addams</h3>
+            <p>A gothic-inspired illustration of Wednesday Addams from "The Addams Family". Perfectly capturing her dark aesthetic and stoic personality.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Character</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 8 -->
+        <div class="art-card" data-category="musician">
+          <div class="art-card-image-wrapper">
+            <img src="../images/ui.jpg" alt="IU - South Korean singer">
+            <div class="art-card-overlay"></div>
+          </div>
+          <div class="art-card-content">
+            <h3>IU (아이유)</h3>
+            <p>A beautiful digital portrait of IU, the acclaimed South Korean singer and actress. Capturing her elegance and artistic presence with detailed shading.</p>
+            <div class="art-card-meta">
+              <span class="art-category-badge">Musician</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal Slider Section -->
+      <div class="art-slider-section">
+        <h2 class="art-slider-title">Browse My Collection</h2>
+        <div class="slider">
+          <div class="slide"><img src="../images/hero.png" alt="Hero from Darling in the Franxx"><p>Hero - Darling in the Franxx</p></div>
+          <div class="slide"><img src="../images/L.jpg" alt="L from Death Note"><p>L - Death Note</p></div>
+          <div class="slide"><img src="../images/kokichi.jpg" alt="Kokichi Ouma from Danganronpa V3"><p>Kokichi Ouma - Danganronpa V3</p></div>
+          <div class="slide"><img src="../images/beethoven.png" alt="Ludwig van Beethoven"><p>Ludwig van Beethoven</p></div>
+          <div class="slide"><img src="../images/class_animal.jpg" alt="Dave Bayley from Glass Animals"><p>Dave Bayley - Glass Animals</p></div>
+          <div class="slide"><img src="../images/harry.png" alt="Harry Styles"><p>Harry Styles - English singer</p></div>
+          <div class="slide"><img src="../images/wednesday.jpg" alt="Wednesday Addams from The Addams Family"><p>Wednesday Addams - The Addams Family</p></div>
+          <div class="slide"><img src="../images/ui.jpg" alt="IU Singer"><p>IU - South Korean singer</p></div>
+        </div>
+      </div>
+
+      <!-- Art Info Section -->
+      <div class="art-info-section">
+        <h2>About My Artwork</h2>
+        <p>
+          I create hand-drawn digital art that captures the essence of my subjects. Each piece is carefully crafted using digital tools to bring characters, musicians, and inspiring figures to life. My artwork reflects a blend of anime inspiration, classical portraiture, and contemporary styles.
+        </p>
+        <p>
+          From anime characters to historical figures and modern musicians, I love exploring different artistic styles and mediums. Every artwork tells a story and represents countless hours of creative effort and dedication to the craft.
+        </p>
+        
+        <div class="art-stats">
+          <div class="art-stat-item">
+            <div class="art-stat-number">20+</div>
+            <div class="art-stat-label">Featured Artworks</div>
+          </div>
+          <div class="art-stat-item">
+            <div class="art-stat-number">10+</div>
+            <div class="art-stat-label">Years of Practice</div>
+          </div>
+          <div class="art-stat-item">
+            <div class="art-stat-number">∞</div>
+            <div class="art-stat-label">Creative Passion</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <h3>Future Biomedical Engineer</h3>
+        <p class="footer-about">
+          I'm Hia Al Saleh - a multidisciplinary creator combining software development, visual art, and biomedical engineering. I design clear, reliable medical software and devices that help clinicians and researchers tackle real-world challenges. Explore my projects and publications, or get in touch to collaborate.
+        </p>
+        <ul class="socials">
+          <li><a href="https://github.com/sHia69" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/hia-al-saleh" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="mailto:hiaxsaleh@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a></li>
         </ul>
       </div>
-    </div>
-  </footer>
-  <a href="#top" aria-label="Back to top" class="back-to-top">
-    <i class="fa fa-chevron-up"></i>
-  </a>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://github.com/sHia69">Hia Al Saleh</a></p>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+            <li><a href="./html/contact.html">Contact</a></li>
+            <li><a href="./html/projects.html">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" aria-label="Back to top" class="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </main>
+
+  <script>
+    function filterArtworks(category) {
+      const cards = document.querySelectorAll('.art-card');
+      const buttons = document.querySelectorAll('.artwork-filter-btn');
+
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filter cards with smooth animation
+      cards.forEach((card, index) => {
+        if (category === 'all' || card.dataset.category === category) {
+          setTimeout(() => {
+            card.style.display = '';
+            card.style.opacity = '1';
+          }, index * 50);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hia Al Saleh's Portfolio</title>
+  <title>Hia Al Saleh - Biomedical Engineer</title>
   <link rel="stylesheet" href="./css/mobile.css" />
   <link rel="stylesheet" href="./css/myStyles.css" />
   <link rel="stylesheet" href="./css/reset.css" />
@@ -11,25 +12,177 @@
 </head>
 <a id="top"></a>
 <style>
-  div img {
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 40%;
+  :root {
+    --accent: linear-gradient(90deg, #4a90e2, #50e3c2);
+    --bg1: #0f1724;
+    --bg2: #0b1020
   }
-    @media screen and (max-width: 768px) {
-      section > div {
-        flex-direction: column;
-        padding: 1rem;
-      }
-      div img {
-        width: 100%;
-        margin: 0 auto 1rem;
-      }
-      section > div > div {
-        width: 100%;
-      }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Segoe UI, Roboto, Arial
+  }
+
+  body {
+    background: linear-gradient(120deg, var(--bg1), var(--bg2));
+    color: #eef2f7
+  }
+
+  nav {
+    padding: 1rem 2rem
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0
+  }
+
+  nav a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: 6px;
+    transition: background .2s
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.04)
+  }
+
+  /* Hero */
+  section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1100px;
+    width: 100%;
+    animation: fadeInUp .8s ease both
+  }
+
+  .hero-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%
+  }
+
+  .profile-img {
+    width: 36%;
+    min-width: 180px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite
+  }
+
+  .profile-img img {
+    display: block;
+    width: 100%;
+    height: auto
+  }
+
+  .hero-content {
+    width: 64%
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: .2rem 0
+  }
+
+  p.lead {
+    margin: .6rem 0 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.25);
+    transition: transform .18s, box-shadow .18s
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(74, 144, 226, 0.28)
+  }
+
+
+  /* Animations */
+  @keyframes float {
+    0% {
+      transform: translateY(0)
     }
+
+    50% {
+      transform: translateY(-8px)
+    }
+
+    100% {
+      transform: translateY(0)
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px)
+    }
+
+    to {
+      opacity: 1;
+      transform: none
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      padding: 1rem
+    }
+
+    .hero-card {
+      flex-direction: column;
+      align-items: center
+    }
+
+    .profile-img {
+      width: 90%;
+      max-width: 360px
+    }
+
+    .hero-content {
+      width: 100%;
+      text-align: center
+    }
+
+    h1 {
+      font-size: 1.6rem
+    }
+  }
 </style>
+
 <body>
   <main style="min-height: 100vh; display: flex; flex-direction: column;">
     <nav>
@@ -41,47 +194,51 @@
         <li><a href="./html/contact.html">Contact</a></li>
       </ul>
     </nav>
-  <section>
-    <div style="display: flex; align-items: center; padding: 2rem;">
-      <img src="./images/bongocode.gif" alt="my image" style=" margin-right: 2rem; border-radius: 20px;">
-      <div style="width: 70%;">
-        <h1>Hi, I'm Hia Al Saleh.</h1>
-        <p style="text-align: center;">
-          I'm a painter artist & software developer
-          who loves exploring new things and being creative.     
-        </p>
-        <a href="./html/about.html" class="btn">Tell Me More!</a>
+    <section>
+      <div class="hero">
+        <div class="hero-card">
+          <div class="profile-img">
+            <img src="./images/bongocode.gif" alt="Hia Al Saleh">
+          </div>
+          <div class="hero-content">
+            <h1>Hi, I'm Hia Al Saleh</h1>
+            <p class="lead">I design and develop medical software and tools that bridge engineering and healthcare. I
+              combine biomedical engineering principles with software development to create reliable solutions for
+              clinicians and researchers.</p>
+            <a href="./html/about.html" class="btn">Explore My Work</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-    <footer> 
+    </section>
+    <footer>
       <div class="footer-content">
-        <h3>Software Developer</h3>
+        <h3>Future Biomedical Engineer</h3>
         <p class="footer-about">
-          Hi, I'm Hia Al Saleh, a painter artist & software developer who loves exploring new things and being creative.
-          Follow my socials below!
+          I'm Hia Al Saleh - a multidisciplinary creator combining software development, visual art, and biomedical engineering. I design clear, reliable medical software and devices that help clinicians and researchers tackle real-world challenges. Explore my projects and publications, or get in touch to collaborate.
         </p>
         <ul class="socials">
-          <li><a href="https://github.com/sHia69"><i class="fa fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/hia-al-saleh-5b228726a/"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="https://replit.com/@sHia69"><i class="fa fa-code"></i></a></li>
+          <li><a href="https://github.com/sHia69" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/hia-al-saleh" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="mailto:hiaxsaleh@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 <a href="https://github.com/sHia69">Hia</a></p>
+        <p>&copy; 2026 <a href="https://github.com/sHia69">Hia Al Saleh</a></p>
         <div class="footer-menu">
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../html/about.html">About</a></li>
-            <li><a href="../html/contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+            <li><a href="./html/contact.html">Contact</a></li>
+            <li><a href="./html/projects.html">Projects</a></li>
           </ul>
         </div>
       </div>
     </footer>
-  <!-- Back to Top Button -->
-  <a href="#top" aria-label="Back to top" class="back-to-top">
-    <i class="fa fa-chevron-up"></i>
-  </a>
+    <!-- Back to Top Button -->
+    <a href="#top" aria-label="Back to top" class="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
   </main>
 </body>
+
 </html>
